@@ -89,7 +89,7 @@ const displayNewsDetails = categories => {
 
     categories.forEach(category => {
 
-        console.log(category)
+        //console.log(category)
         const newsTitle = document.getElementById('newsDetailModalLabel');
         newsTitle.innerText = category.title;
         const newsDetails = document.getElementById('news-details');
@@ -124,3 +124,6 @@ const displayNewsDetails = categories => {
     })
 }
 loadCatagories();
+defaultNews = () => {
+    
+}
