@@ -76,8 +76,7 @@
     background-color: rgb(255, 254, 254) !important;
   }
   .modal-box {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    width: 100%!important;
+    margin-left: 0px;
   }
 }
