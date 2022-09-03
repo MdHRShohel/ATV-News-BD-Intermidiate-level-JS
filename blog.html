@@ -10,7 +10,7 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
-
+    <!-- Style added -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -56,104 +56,146 @@
       </section>
     </header>
 
-    <main class="my-5">
-      <div class="card text-bg-dark mb-3 container mt-5">
-        <div class="card-header">
-          <h2>Difference of var, let, const</h2>
+    <main class="my-5 container">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              What's the difference berween var, let and const?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              A lot of shiny new features came out with ES2015 (ES6). And now,
+              since it's 2020, it's assumed that a lot of JavaScript developers
+              have become familiar with and have started using these features.
+              While this assumption might be partially true, it's still possible
+              that some of these features remain a mystery to some devs. One of
+              the features that came with ES6 is the addition of let and const,
+              which can be used for variable declaration. The question is, what
+              makes them different from good ol' var which we've been using? If
+              you are still not clear about this, then this article is for you.
+              In this article, we'll discuss var, let and const with respect to
+              their scope, use, and hoisting. As you read, take note of the
+              differences between them that I'll point out.
+            </div>
+          </div>
         </div>
-        <div class="card-body">
-          <h4 class="card-title">Var:</h4>
-          <p class="card-text text-light">
-            Var er man Jekono Jayga theke Update kora jay. Var er man Bivinno
-            Hote pare. Bivinno Jayga theke call kora jay
-          </p>
-          <h4 class="card-title">Let:</h4>
-          <p class="card-text text-light">
-            Let er man Jekono Jayga theke Update kora jay. Let er man Bivinno
-            Jayga theke Call kora jay na
-          </p>
-          <h4 class="card-title">Var:</h4>
-          <p class="card-text text-light">
-            Const er man Jekono Jayga theke Update kora jay na. Const er man
-            Bivinno Jayga theke call o kora jay na
-          </p>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              What is the difference between Regular functions and arrow
+              functions?
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Regular functions created using function declarations or
+              expressions are constructible and callable. Since regular
+              functions are constructible, they can be called using the new
+              keyword. However, the arrow functions are only callable and not
+              constructible, i.e arrow functions can never be used as
+              constructor functions. The arrow function example above allows a
+              developer to accomplish the same result with fewer lines of code
+              and approximately half the typing. Curly brackets aren’t required
+              if only one expression is present. The above example can also be
+              written like this:
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="card text-bg-dark mb-3 container mt-5">
-        <div class="card-header">
-          <h2>Difference of arrow function and regular function</h2>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              What is the difference between forEach, map, filter and find
+              functions?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              .forEach: .forEach(), is used to execute the same code on every
+              element in an array but does not change the array and it returns
+              undefined. Example: In the example below we would use .forEach()
+              to iterate over an array of food and log that we would want to eat
+              each of them. let food = ['mango','rice','pepper','pear'];
+              food.forEach(function(foodItem){ console.log('I want to eat
+              '+foodItem); }); .map() executes the same code on every element in
+              an array and returns a new array with the updated elements.
+              .filter() checks every element in an array to see if it meets a
+              certain criteria and returns a new array with the elements that
+              return truthy for the criteria.
+            </div>
+          </div>
         </div>
-        <div class="card-body">
-          <h4 class="card-title">Arrow Function:</h4>
-          <p class="card-text text-light">
-            Arrow Function use korle kom code likha lage
-          </p>
 
-          <h4 class="card-title">Regula Function:</h4>
-          <p class="card-text text-light">
-            Regula Function use korle Besi code likha lage
-          </p>
-        </div>
-      </div>
-
-      <div class="card text-bg-dark mb-3 container mt-5">
-        <div class="card-header">
-          <h2>Difference of map,for-each,filter,find</h2>
-        </div>
-        <div class="card-body">
-          <h4 class="card-title">Map:</h4>
-          <p class="card-text text-light">
-            .map er kaj holo ekta array[2,3,4,5] er moddhe sob gula element k
-            dhore tader sathe jkno man +,-,*,/ kora jay example: const numbers =
-            [3, 4, 5, 2]; const resultMap = numbers.map(num => num + 50);
-            console.log(resultMap); output: [ 53, 54, 55, 52 ]
-          </p>
-          <h4 class="card-title">For-each:</h4>
-          <p class="card-text text-light">
-            forEach er kaj holo akta array theke ptottek ta upadan k alada alada
-            kore ber kora example: const numbers = [3, 4, 5, 2];
-            numbers.forEach(number => { console.log(number); }) output: 3 4 5 2
-          </p>
-          <h4 class="card-title">Filter:</h4>
-          <p class="card-text text-light">
-            .filter use kore akta arrey theke sob upadan er moddhe kunta boro
-            kunta coto sohoje ber kora jay; Example: const numbers = [3, 4, 5,
-            2]; const result = numbers.filter(num => num < 5)
-            console.log(result); Output: [ 3, 4, 2 ]
-          </p>
-
-          <h4 class="card-title">Find:</h4>
-          <p class="card-text text-light">
-            .find er kaj holo eta array er prottek upadan theke condition
-            maddhome sober 1st er updan ta nibe
-
-            <br />
-            Example: const numbers = [3, 6, 5, 2]; const result =
-            numbers.find(num => num > 3); console.log(result); Output: 6
-
-            <br />
-            const numbers = [3, 1, 5, 2]; const result = numbers.find(num => num
-            > 3); console.log(result); Output: 5
-            <br />
-            const numbers = [3, 1, 5, 2]; const result = numbers.find(num => num
-            < 3); console.log(result); Output: 1 const numbers=[3, 4, 5, 2, 1];
-            const result=numbers.find(num=> num < 3); console.log(result);
-            Output: 2
-          </p>
-        </div>
-      </div>
-
-      <div class="card text-bg-dark mb-3 container mt-5">
-        <div class="card-header">
-          <h2>Why use template string</h2>
-        </div>
-        <div class="card-body">
-          <h4 class="card-title">Template String</h4>
-          <p class="card-text text-light">
-            Templete String use kore onek easy te variable,function likha jay.
-            Eta ES6 er ekta method. eta onk powerfull and code k easy kore dey.
-          </p>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Why do we use temple sting?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Template literals are literals delimited with backtick (`)
+              characters, allowing for multi-line strings, for string
+              interpolation with embedded expressions, and for special
+              constructs called tagged templates. Template literals are
+              sometimes informally called template strings, because they are
+              used most commonly for string interpolation (to create strings by
+              doing substitution of placeholders). However, a tagged template
+              literal may not result in a string; it can be used with a custom
+              tag function to perform whatever operations you want on the
+              different parts of the template literal.
+            </div>
+          </div>
         </div>
       </div>
     </main>
