@@ -42,15 +42,22 @@ const newsLoad = category_id => {
 const displayNews=catagories=>{
     const newsContainer = document.getElementById('news-container');
      newsContainer.innerHTML = '';
-
-         // founded msg 
+     // founded msg 
     const foundedMessege = document.getElementById('founded-msg');
     foundedMessege.classList.remove('hidden')
-
-
     // founded-text
     const fountText = document.getElementById('founded-text')
     fountText.innerText = catagories.length;
+
+    // sort by view
+    catagories.sort((a, b) => {
+        if (a.total_view < b.total_view) {
+            return 1;
+        }
+        else {
+            return -1;
+        }
+    })
 
     catagories.forEach(category => {
         const createSingleNews = document.createElement('div');
