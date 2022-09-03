@@ -16,8 +16,9 @@ const displayCatagories = catagories => {
     const catagoryContainer = document.getElementById('catagory-container');
     catagories.forEach(catagory => {
         const div = document.createElement('div');
+        div.classList.add('nav');
         div.innerHTML = `
-        <button onclick="newsLoad('${catagory.category_id}')" type="button" class="btn btn-light">${catagory.category_name}</button>
+        <button onclick="newsLoad('${catagory.category_id}')" type="button" class="nav-btn">${catagory.category_name}</button>
     
         `;
         catagoryContainer.appendChild(div);
@@ -125,9 +126,6 @@ const displayNews=catagories=>{
     }
 }
 
-
-
-
 const loadDetails = async _id => {
 
     const url = `https://openapi.programming-hero.com/api/news/${_id}`;
@@ -177,4 +175,4 @@ const displayNewsDetails = categories => {
     })
 }
 loadCatagories();
-//newsLoad('01');
+newsLoad('01');

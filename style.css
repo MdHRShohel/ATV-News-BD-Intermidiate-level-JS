@@ -55,3 +55,29 @@
 
   overflow: hidden;
 }
+
+/* Resposive Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap !important;
+  }
+  #catagory-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+  }
+  .nav {
+    display: block !important;
+    width: 100% !important;
+    text-align: center;
+  }
+  .nav-btn {
+    width: 100% !important;
+    background-color: rgb(255, 254, 254) !important;
+  }
+  .modal-box {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
