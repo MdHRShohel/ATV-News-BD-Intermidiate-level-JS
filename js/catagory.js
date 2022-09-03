@@ -121,7 +121,7 @@ const displayNews=catagories=>{
 
         }
     } catch (error) {
-        console.log('May Be Something is Missing');
+        console.log('Error!!Something is Missing');
         console.log(error);
     }
 }
@@ -155,7 +155,7 @@ const displayNewsDetails = categories => {
                           <img src="${category.author.img}" alt="">
                           <div class="author">
                               <h6>${category.author ? category.author.name : 'No Data Found'}</h6>
-                              <p>${category.author ? category.author.published_date : 'No Data Fpund'} </p>
+                              <p>${category.author ? category.author.published_date : 'No Data Found'} </p>
                           </div>
                   </div>
  
