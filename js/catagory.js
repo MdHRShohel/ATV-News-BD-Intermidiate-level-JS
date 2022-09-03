@@ -18,7 +18,7 @@ const displayCatagories = catagories => {
         const div = document.createElement('div');
         div.classList.add('nav');
         div.innerHTML = `
-        <button onclick="newsLoad('${catagory.category_id}')" type="button" class="nav-btn">${catagory.category_name}</button>
+        <button onclick="newsLoad('${catagory.category_id}')" type="button" class="btn btn-light nav-btn">${catagory.category_name}</button>
     
         `;
         catagoryContainer.appendChild(div);
