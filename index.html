@@ -34,13 +34,7 @@
             <a class="navbar-brand fw-bolder">NEWS BD</a>
           </div>
           <form class="d-flex gap-2">
-            <button
-              onclick="defaultNews()"
-              class="btn btn-outline-dark active"
-              type="text"
-            >
-              News
-            </button>
+            <button class="btn btn-outline-dark active">News</button>
             <a class="btn btn-outline-dark" href="blog.html">Blog</a>
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKBH5DbCnCmwQCpcjv__106JSjG3U2oVNZRw&usqp=CAU"
@@ -59,11 +53,31 @@
           class="container-fluid d-flex justify-content-between"
         ></div>
       </section>
+      <section>
+      <!-- founded msg  -->
+        <div id="founded-msg" class="container mt-3 items-center bg-light text-center">
+          <h4 class="card-title">
+            <span id="founded-text">0</span> items found in this catagory.
+          </h4>
+        </div>
+    </section>
+      <!-- speener -->
+      <section id="loader" class="mt-5 d-none">
+        <div
+          style="height: 350px"
+          class="mt-5 d-flex justify-content-center align-items-center"
+        >
+          <div class="spinner-border text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </section>
     </header>
     <main>
       <section>
         <div class="container" id="news-container"></div>
       </section>
+
       <!-- Modal Section -->
       <section>
         <!-- Button trigger modal -->
@@ -104,7 +118,7 @@
     </main>
     <!-- Footer Start -->
     <div class="container my-5">
-      <footer class=" bg-light text-center">
+      <footer class="bg-light text-center">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
           <!-- Section: Form -->
@@ -163,9 +177,7 @@
         <!-- Copyright -->
       </footer>
     </div>
-     <!-- Footer End -->
-
-
+    <!-- Footer End -->
 
     <!-- Bootstrap JS CDN -->
     <script

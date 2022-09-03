@@ -46,3 +46,12 @@
   width: 1200px !important;
   margin-left: -350px;
 }
+.paragraph {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  text-overflow: ellipsis;
+
+  overflow: hidden;
+}

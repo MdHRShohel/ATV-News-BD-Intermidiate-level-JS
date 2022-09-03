@@ -1,9 +1,17 @@
+// loadCategories function call
 const loadCatagories = async() => {
     const url = `https://openapi.programming-hero.com/api/news/categories`;
+    try {
     const res = await fetch(url);
     const data = await res.json();
     displayCatagories(data.data.news_category);
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
+
+// displayCatagories function call
 const displayCatagories = catagories => {
     const catagoryContainer = document.getElementById('catagory-container');
     catagories.forEach(catagory => {
@@ -17,17 +25,33 @@ const displayCatagories = catagories => {
 }
 
 
-
+// newsLoad function call
 const newsLoad = category_id => {
+    toggleSpinner(true);
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+    try {
     fetch(url)
     .then(res => res.json())
     .then(data => displayNews(data.data))
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
 
 const displayNews=catagories=>{
     const newsContainer = document.getElementById('news-container');
      newsContainer.innerHTML = '';
+
+         // founded msg 
+    const foundedMessege = document.getElementById('founded-msg');
+    foundedMessege.classList.remove('hidden')
+
+
+    // founded-text
+    const fountText = document.getElementById('founded-text')
+    fountText.innerText = catagories.length;
+
     catagories.forEach(category => {
         const createSingleNews = document.createElement('div');
         createSingleNews.classList.add('single-news');
@@ -38,8 +62,8 @@ const displayNews=catagories=>{
                  </div>
                  <div class="col-md-9 ">
                      <div class="card-body">
-                        <h3 class="card-title fw-bold">${category ? category.title : 'No Data Found'}</h3>
-                        <p class="card-text">${category.details.slice(0, 1000)}</p>
+                        <h3 class="card-title fw-bold mb-3">${category ? category.title : 'No Data Found'}</h3>
+                        <p class="card-text mb-3 paragraph">${category.details.slice(0, 1000)}</p>
          
                       </div>
                   <div class="card-bottom d-flex align-items-center justify-content-between">
@@ -74,7 +98,29 @@ const displayNews=catagories=>{
               `;
         newsContainer.appendChild(createSingleNews);
     })
+    toggleSpinner(false);
 }
+
+ // speener 
+ const toggleSpinner = isLoading => {
+    try {
+        const loaderSection = document.getElementById('loader');
+        if (isLoading) {
+            loaderSection.classList.remove('d-none');
+        }
+        else {
+            loaderSection.classList.add('d-none');
+
+        }
+    } catch (error) {
+        console.log('May Be Something is Missing');
+        console.log(error);
+    }
+}
+
+
+
+
 const loadDetails = async _id => {
 
     const url = `https://openapi.programming-hero.com/api/news/${_id}`;
@@ -124,6 +170,4 @@ const displayNewsDetails = categories => {
     })
 }
 loadCatagories();
-defaultNews = () => {
-    
-}
+//newsLoad('01');
